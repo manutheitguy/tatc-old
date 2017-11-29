@@ -1,0 +1,43 @@
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+	    <meta name="keywords" content="web design, affordable web design, professional web design">
+        <meta name="author" content="Emmanuel Makonde">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+        <title>Trans-Atlantic Ventures</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <!-- <img src="{% static "home/img/logo.png" %}" alt="tatc-logo"/> -->
+          <h1>Trans-Atlantic Ventures</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+      {% block content %}
+      
+      {% endblock %}
+    
+    <footer>
+        <p align="center">Trans-Atlantic Ventures Copyright &copy; 2017</p>
+    </footer>
+  </body>
+</html>
