@@ -13,3 +13,9 @@ def about(request):
 def services(request):
 
     return render(request, 'home/services.html')
+
+def blog(request):
+
+    return render(request, 'home/blog.html', {
+    'title': 'Latest Posts'
+})
