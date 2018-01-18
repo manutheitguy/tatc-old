@@ -126,7 +126,7 @@ input[type="color"],
     height: 45px;
 }
 .form-control:focus {
-    border-color: #f56363;
+    border-color: orange;
 }
 
 h1,
@@ -1033,7 +1033,7 @@ input:-ms-input-placeholder {
     border-radius: 0.25em;
 }
 .no-touch .cd-timeline-content .cd-read-more:hover {
-    background-color: #bac4cb;
+    background-color: #5b5b5c;
 }
 .cd-timeline-content .cd-date {
     float: left;
@@ -1297,7 +1297,7 @@ input:-ms-input-placeholder {
     transition:.5s;
 }
 .footer-mid-content .post a:hover{
-    color:red;
+    color: white;
 }
 .footer-last-content .contact-info{
     padding-top:10px;
