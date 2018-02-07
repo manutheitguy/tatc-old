@@ -3,10 +3,7 @@
 
 jQuery(document).ready(function ($) {
 
-	$(window).load(function () {
-		$(".loaded").fadeOut();
-		$(".preloader").delay(1000).fadeOut("slow");
-	});
+
     /*---------------------------------------------*
      * Mobile menu
      ---------------------------------------------*/
@@ -28,130 +25,116 @@ jQuery(document).ready(function ($) {
 
 
     /*---------------------------------------------*
-     * Easy Pie Chart
+     * For Price Table
      ---------------------------------------------*/
 
-
-
-    $('.skills').waypoint(function () {
-        $('.chart').easyPieChart({
-            animate: 2000,
-            scaleColor: false,
-            lineWidth: 4,
-            lineCap: 'square',
-            size: 130,
-            
-            trackColor: false,
-            barColor: '#fff',
-            onStep: function (from, to, percent) {
-                $(this.el).find('.percent').text(Math.round(percent));
-            }
+    checkScrolling($('.cd-pricing-body'));
+    $(window).on('resize', function () {
+        window.requestAnimationFrame(function () {
+            checkScrolling($('.cd-pricing-body'))
+        });
+    });
+    $('.cd-pricing-body').on('scroll', function () {
+        var selected = $(this);
+        window.requestAnimationFrame(function () {
+            checkScrolling(selected)
         });
     });
 
-    /*---------------------------------------------*
-     * Scroll Up Section
-     ---------------------------------------------*/
+    function checkScrolling(tables) {
+        tables.each(function () {
+            var table = $(this),
+                    totalTableWidth = parseInt(table.children('.cd-pricing-features').width()),
+                    tableViewport = parseInt(table.width());
+            if (table.scrollLeft() >= totalTableWidth - tableViewport - 1) {
+                table.parent('li').addClass('is-ended');
+            } else {
+                table.parent('li').removeClass('is-ended');
+            }
+        });
+    }
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200)
-        {
-            $('.scrollup').fadeIn();
-        }
-        else
-        {
-            $('.scrollup').fadeOut();
-        }
-    });
+    //switch from monthly to annual pricing tables
+    bouncy_filter($('.cd-pricing-container'));
 
-    $('.scrollup').click(function () {
-        $("html, body").animate({scrollTop: 0}, 1000);
-        return false;
-    });
+    function bouncy_filter(container) {
+        container.each(function () {
+            var pricing_table = $(this);
+            var filter_list_container = pricing_table.children('.cd-pricing-switcher'),
+                    filter_radios = filter_list_container.find('input[type="radio"]'),
+                    pricing_table_wrapper = pricing_table.find('.cd-pricing-wrapper');
 
-    /*---------------------------------------------*
-     * Scroll Total Navbar
-     ---------------------------------------------*/
+            //store pricing table items
+            var table_elements = {};
+            filter_radios.each(function () {
+                var filter_type = $(this).val();
+                table_elements[filter_type] = pricing_table_wrapper.find('li[data-type="' + filter_type + '"]');
+            });
 
-    $('body').scrollspy({
-        target: '.navbar',
-        offset: 160
-    });
-	
-	 /*---------------------------------------------*
-     * Timeline Section
-     ---------------------------------------------*/
-	
-	var timelineBlocks = $('.cd-timeline-block'),
-		offset = 0.8;
+            //detect input change event
+            filter_radios.on('change', function (event) {
+                event.preventDefault();
+                //detect which radio input item was checked
+                var selected_filter = $(event.target).val();
 
-	//hide timeline blocks which are outside the viewport
-	hideBlocks(timelineBlocks, offset);
+                //give higher z-index to the pricing table items selected by the radio input
+                show_selected_items(table_elements[selected_filter]);
 
-	//on scolling, show/animate timeline blocks when enter the viewport
-	$(window).on('scroll', function(){
-		(!window.requestAnimationFrame) 
-			? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
-			: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
-	});
+                //rotate each cd-pricing-wrapper 
+                //at the end of the animation hide the not-selected pricing tables and rotate back the .cd-pricing-wrapper
 
-	function hideBlocks(blocks, offset) {
-		blocks.each(function(){
-			( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-		});
-	}
+                if (!Modernizr.cssanimations) {
+                    hide_not_selected_items(table_elements, selected_filter);
+                    pricing_table_wrapper.removeClass('is-switched');
+                } else {
+                    pricing_table_wrapper.addClass('is-switched').eq(0).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
+                        hide_not_selected_items(table_elements, selected_filter);
+                        pricing_table_wrapper.removeClass('is-switched');
+                        //change rotation direction if .cd-pricing-list has the .cd-bounce-invert class
+                        if (pricing_table.find('.cd-pricing-list').hasClass('cd-bounce-invert'))
+                            pricing_table_wrapper.toggleClass('reverse-animation');
+                    });
+                }
+            });
+        });
+    }
+    function show_selected_items(selected_elements) {
+        selected_elements.addClass('is-selected');
+    }
 
-	function showBlocks(blocks, offset) {
-		blocks.each(function(){
-			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-		});
-	}
+    function hide_not_selected_items(table_containers, filter) {
+        $.each(table_containers, function (key, value) {
+            if (key != filter) {
+                $(this).removeClass('is-visible is-selected').addClass('is-hidden');
 
+            } else {
+                $(this).addClass('is-visible').removeClass('is-hidden is-selected');
+            }
+        });
+    }
 
 
     /*---------------------------------------------*
      * STICKY scroll
      ---------------------------------------------*/
 
-//    $.localScroll();
+    $.localScroll();
 
 
 
-    /*---------------------------------------------*
-     * Counter 
-     ---------------------------------------------*/
+// scroll Up
 
-//    $('.statistic-counter').counterUp({
-//        delay: 10,
-//        time: 2000
-//    });
-
-
-
-
-    /*---------------------------------------------*
-     * WOW
-     ---------------------------------------------*/
-
-//        var wow = new WOW({
-//            mobile: false // trigger animations on mobile devices (default is true)
-//        });
-//        wow.init();
-
-
-    /* ---------------------------------------------------------------------
-     Carousel
-     ---------------------------------------------------------------------= */
-
-//    $('.testimonials').owlCarousel({
-//        responsiveClass: true,
-//        autoplay: false,
-//        items: 1,
-//        loop: true,
-//        dots: true,
-//        autoplayHoverPause: true
-//
-//    });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 600) {
+            $('.scrollup').fadeIn('slow');
+        } else {
+            $('.scrollup').fadeOut('slow');
+        }
+    });
+    $('.scrollup').click(function () {
+        $("html, body").animate({scrollTop: 0}, 1000);
+        return false;
+    });
 
 
     //End

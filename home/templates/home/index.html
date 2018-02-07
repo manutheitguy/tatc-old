@@ -1,33 +1,33 @@
-<!-- {% extends 'home/layout.html' %}
+{% extends 'home/base.html' %}
 
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}" />
+{% block nav %}
 
-{% block content %}
+{% include 'home/navbar.html' %}
+  
+{% endblock nav %}
 
-   
+{% block hero %}
 
-{% endblock %} -->
+{% include 'home/hero.html' %}
 
-<!--Home page style-->
-<header id="home" class="home">
-    <div class="overlay-img">
-        <div class="container">
+{% endblock hero %}
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="home-content">
+{% block services %}
 
-                        <h5>Grab Your Copy Of</h5>
-                        <h1>The <span>Premium</span> Quality PSD Template For <span>free</span></h1>
+{% include 'home/services.html' %}
 
-                        <a target="_blank" href="#"><button class="btn btn-default btn-home">Download<span><i class="fa fa-download"></i></span></button></a>
+{% endblock services %}
 
-                    </div>
-                </div>
-            </div>
+{% block contact %}
 
-        </div>
-    </div>	
-</header>
+{% include 'home/contact.html' %}
+
+{% endblock contact %}
+
+{% block footer %}
+
+{% include 'home/footer.html' %}
+
+{% endblock footer%}

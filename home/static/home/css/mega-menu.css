@@ -1,0 +1,52 @@
+nav {
+	background: #fff;
+}
+.wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+
+nav li:hover .mega-menu {
+	display: block;
+}
+
+
+.mega-menu {
+	float: left;
+	overflow: hidden;
+	padding: 0;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	background: white;
+	width: 100%;
+	display: none;
+	color: #444;
+	border-radius: 0;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
+}
+
+.cta-btn {
+	background: #23479B;
+	border-radius: 0;
+	margin: 0;
+}
+
+.hero-btn {
+	background: #23479B;
+	margin: 0;
+}
+.col-md-3 {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.fa-angle-right {
+	margin-left: 1em;
+	margin-right: 1em; 
+}
+
+@media(max-width:500px){
+	.mega-menu{
+		width: 300px;
+	}
+}

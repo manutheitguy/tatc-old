@@ -1,0 +1,144 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+* {
+  /* Used so padding and margins fit in elements defined size */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+}
+
+body {
+  background: #ddd;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  background: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  text-align: right;
+}
+
+nav li {
+  text-align: left;
+  display: inline-block;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  display: block;
+  padding: .75em 1.75em;
+}
+
+.main-menu > li:hover > a {
+  font-weight: bold;
+  color: #23479B;
+  text-decoration: none;
+}
+
+.sub-menu a:hover {
+  color: #23479B;
+  text-decoration: none;
+}
+
+.sub-menu {
+  position: absolute;
+  left: 0;
+  background: white;
+  width: 100%;
+  display: none;
+  color: #444;
+  padding-top: 2em;
+  padding-bottom: 0;
+  border-top: 1px solid rgb(160, 160, 160);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
+}
+
+nav li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu li {
+  display: block;
+  color: #444;
+}
+
+.sub-menu a {
+  padding: 0;
+  margin-bottom: 0;
+  color: #444;
+}
+
+.sub-menu a:hover {
+  text-decoration: none;
+  color: #23479B;
+}
+
+.menu-category {
+  margin: 2.5em 0 .5em;
+}
+
+.menu-category:first-of-type {
+  margin-top: 0;
+}
+
+.menu-col-1,
+.menu-col-2,
+.menu-col-3,
+.menu-col-4 {
+  float: left;
+}
+
+.menu-col-1 {
+  width: 25%;
+  background: rgb(255, 255, 255);
+}
+
+.menu-col-2 {
+  width: 50%;
+  background: rgb(255, 255, 255);
+  
+}
+
+.menu-col-4 {
+  width: 100%;
+  background: #23479B;
+}
+
+/* Additional Styles */
+
+.btn {
+  color: #23479B;
+  background: #23479B;
+}
+
+.nav-cta {
+  background: #23479B;
+  margin: 0;
+  border-radius: 0;
+  border: 0em;
+}
+
+.jumbotron-fluid {
+  background-image: url("../img/reception2.jpg");
+  background-size: cover;
+}
+
+.jumbo-txt, .jumbo-hr {
+  color: #fff;
+}
+
+.sub-menu-icon {
+  color: #23479B;
+}
