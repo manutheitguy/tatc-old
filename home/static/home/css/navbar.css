@@ -4,19 +4,11 @@ body {
 }
 .mega-dropdown {
   position: static !important;
-  border-radius: 0;
 }
 
 .mega-dropdown-menu {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   width: 100%;
-  float: left;
 	overflow: hidden;
-	margin: 0 auto;
-	position: absolute;
-	left: 0;
 	background: white;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -45,32 +37,7 @@ body {
   line-height: 30px;
 }
 
-.carousel-control {
-  width: 30px;
-  height: 30px;
-  top: -35px;
-
-}
-.left.carousel-control {
-  right: 30px;
-  left: inherit;
-}
-.carousel-control .glyphicon-chevron-left, 
-.carousel-control .glyphicon-chevron-right {
-  font-size: 12px;
-  background-color: #fff;
-  line-height: 30px;
-  text-shadow: none;
-  color: #333;
-  border: 1px solid #ddd;
-}
-
 /* Additional styles */
-
-
-.last {
-  margin-right: 1.4rem;
-}
 
 .cta-btn {
   top: 5px;
@@ -78,4 +45,27 @@ body {
   color: #fff;
   background: #23479B;
   padding: .5rem;
+}
+
+.navbar-default .navbar-collapse {
+  border-radius: 0;
+  border-color: white;
+  background: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+  z-index: 1000;
+}
+.navbar-default {
+  border-color: white;
+  background: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #000;
+}
+nav {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  background: red;
+  border-radius: 0;
 }

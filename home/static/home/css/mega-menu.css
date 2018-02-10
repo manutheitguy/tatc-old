@@ -6,10 +6,6 @@ nav {
 	margin: 0 auto;
 }
 
-nav li:hover .mega-menu {
-	display: block;
-}
-
 
 .mega-menu {
 	float: left;
