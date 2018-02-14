@@ -1,79 +1,90 @@
 {% load static %}
-
- <!--Footer Section -->
- <section id="footer-menu" class="sections footer-menu">
+    <!-- FOOTER -->
+    <footer class="footer footer-classic bg-blue">
         <div class="container">
             <div class="row">
-                <div class="footer-menu-wrapper">
-    
-                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="menu-item">
-                                <h5>Quick Links</h5>
-                                <ul>
-                                    <li>OUR IMPORTS</li>
-                                    <li>OUR EXPORTS</li>
-                                    <li>LOGISTICS</li>
-                                    <li>SUPPLIES</li>
-                                    <li>DOWNLOADS</li>
-                                </ul>
+                <div class="col-md-3">
+                    <div class="footer-text">
+                        <a href="#">
+                            <div class="img-fluid">
+                                <img src="{% static 'home/images/logo2.png' %}" alt="">
                             </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="menu-item">
-                                <h5>Legal</h5>
-                                <ul>
-                                    <li>PRIVACY & COOKIES</li>
-                                    <li>TERMS OF USE</li>
-                                    <li>TRADEMARKS</li>
-                                </ul>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="menu-item">
-                                <h5>Information</h5>
-                                <ul>
-                                    <li>IMPORTS</li>
-                                    <li>EXPORTS</li>
-                                    <li>BLOG</li>
-                                    <li>NEWSLETTER</li>
-                                    <li>TECH SOLUTIONS</li>
-                                </ul>
-                            </div>
+                        </a>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do 
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad 
+                            minim veniam quis nostrud exercitation.
+                        </p>
+                        <div class="social-icons">
+                            <a href="#" class="btn btn-social btn-social-o twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-social btn-social-o linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-social btn-social-o facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="btn btn-social btn-social-o skype">
+                                <i class="fab fa-skype"></i>
+                            </a>
+                            <a href="#" class="btn btn-social btn-social-o pinterest">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
                         </div>
                     </div>
-    
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="menu-item">
-                            <h5>Newsletter</h5>
-                            <p>Stay up to date with what we are up to. Subcribe to our newsletter for more.</p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter your email address">
-                                <input type="submit" class="form-control" value="Use It Free">
-                            </div>
-                        </div>
-                    </div>   
                 </div>
+                <div class="col-xl-2 col-md-2">
+                    <div class="links">
+                        <h3>Links</h3>
+                        <ul class="">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolios</a></li>
+                            <li><a href="#">Latest Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="location">
+                        <h3>Location</h3>
+                        <ul>
+                            <li>Excepteur sint occaecat cupidat non proident sunt.</li>
+                            <li><i class="fa fa-home"></i> CPA Center, Thika Road,</li>
+                            <li><i class="fa fa-phone"></i> <a href="tel:+254791071920">[+254] 791 071 920</a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="#mailto"> info@tatc.co.ke </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="instagram">
+                        <h3>Instagram</h3>
+                        <ul class="row instagram-image">
+                            <li class="col-xs-4 col-4"><a href="#"><img data-original="img/home/footer/insta1.png" alt="insta" class="loaded" src="{% static 'home/images/p6.png' %}" data-was-processed="true"></a></li>
+                            <li class="col-xs-4 col-4"><a href="#"><img data-original="img/home/footer/insta2.png" alt="insta" class="loaded" src="{% static 'home/images/p6.png' %}" data-was-processed="true"></a></li>
+                            <li class="col-xs-4 col-4"><a href="#"><img data-original="img/home/footer/insta3.png" alt="insta" class="loaded" src="{% static 'home/images/p6.png' %}" data-was-processed="true"></a></li>
+                            <li class="col-xs-4 col-4"><a href="#"><img data-original="img/home/footer/insta4.png" alt="insta" class="loaded" src="{% static 'home/images/p6.png' %}" data-was-processed="true"></a></li>
+                            <li class="col-xs-4 col-4"><a href="#"><img data-original="img/home/footer/insta5.png" alt="insta" class="loaded" src="{% static 'home/images/p6.png' %}" data-was-processed="true"></a></li>
+                            <li class="col-xs-4 col-4"><a href="#"><img data-original="img/home/footer/insta6.png" alt="insta" class="loaded" src="{% static 'home/images/p6.png' %}" data-was-processed="true"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BACK TO TOP BUTTON -->
+                <!-- <a href="#pageTop" class="backToTop"><i class="fa fa-angle-up" aria-hidden="true"></i></a> -->
+
+                <!-- COPY RIGHT -->
             </div>
-        </div>
-    </section>
-     <footer id="footer" class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-wrapper">
-                    <div class="col-lg-12">
-                        <div class="copyright">
-                            <p class="text-center">&copy; 2018 Trans-Atlantic Trading Company. All rights reserved.</p>
+            <div class="copyright">
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                        <div class="copyRight_text text-center">
+                            <p>&copy; 2018. Trans-Atlantic Trading Company.</p>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-    
-    
-    <div class="scrollup">
-        <a href="#"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
-    </div>

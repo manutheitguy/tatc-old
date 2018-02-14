@@ -1,55 +1,91 @@
- <!-- Services Section -->
- <section id="business" class="portfolio sections tatc-services">
-    <div class="container">
-        <div class="head_title text-center">
-            <h1>What We Do</h1>
-            <p>
-                Our vision is to become a globally recognized brand in cross-border trading of high demand commodties, provision of cost effective IT services and services as well as general supplies and logistic
-            </p>
-        </div>
+{% load static %}
+<!-- 
+######################################################
+                    OUR TEAM SECTION
+######################################################
+-->
 
-        <!-- Example row of columns -->
-        
-        <div class="row">
-            <div class="portfolio-wrapper2 text-center">
-                <a href="#">
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="community-edition">
-                            <i class="fas fa-briefcase fa-5x"></i>
-                            <h4>Commercial Division</h4>
-                            <p class="lead">
-                                Our commercial division addresses a gap in the marketplace internally and overseas a reliable trading partner able to supply large quantities of quality produce and products expeditiously and at competitive prices
-                            </p>
+<section class="home-team portfolio sections">
+        <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="sectionTitle text-center">
+                        <h2>Our Team</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
+                    </div>
+                </div>
+            </div>
+            <!-- section title ends -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="img-full loaded" data-original="img/home/about/p5.jpg" alt="Card image" src="{% static 'home/images/p5.jpg' %}" data-was-processed="true">
+                            <div class="hover-overlay effect-scale">
+                                <a href="" class="overlay_icon"><i class="fab fa-facebook-f fa-2x"></i></a>
+                                <a href="" class="overlay_icon"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="" class="overlay_icon"><i class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="#page-member-details.html"><h4 class="card-title">Eng. John Lenga</h4></a>
+                            <span class="">C.E.O</span>
                         </div>
                     </div>
-                </a>
-
-            <a href="#">               
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="community-edition">
-                        <i class="fas fa-truck fa-5x"></i>
-                        <h4>Logistics Division</h4>
-                        <p class="lead">
-                            We provide general supplies to a wide range of corporate bodies and entities, private sectors, NGOs, parastatals and government ministries, internatonal organizations and other private institutions.
-                        </p>
-                    </div><!-- ./Community Edition -->
-                </div><!-- ./Community Edition -->
-            </a>
- 
-
-                <a href="#">    
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="community-edition">
-                            <i class="fas fa-desktop fa-5x"></i>
-                            <h4>IT Division</h4>
-                            <p class="lead">
-                                With a passion for excellence, we provide innovative and affordable solutions of the highest quality in terms of perfomance, scalability and security to clients from diverse sectors of the economy.
-                            </p>
+                </div>
+    
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="card-img-top img-full loading" src="{% static 'home/images/p5.jpg' %}" alt="Card image" data-was-processed="true">
+                            <div class="hover-overlay effect-scale">
+                                <a href="#" class="overlay_icon"><i class="fab fa-facebook-f fa-2x"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="#page-member-details.html"><h4 class="card-title">Raphael Chilumo</h4></a>
+                            <span class="">B.D.M</span>
                         </div>
                     </div>
-                </a>
-
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="img-full loaded" data-original="img/home/about/p5.jpg" alt="Card image" src="{% static 'home/images/p5.jpg' %}" data-was-processed="true">
+                            <div class="hover-overlay effect-scale">
+                                <a href="#" class="overlay_icon"><i class="fab fa-facebook-f fa-2x"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="#"><h4 class="card-title">Susan Kihato</h4></a>
+                            <span class="">HR &amp; Marketing Manager</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="img-full loaded" data-original="img/home/about/p5.jpg" alt="Card image" src="{% static 'home/images/p5.jpg' %}" data-was-processed="true">
+                            <div class="hover-overlay effect-scale">
+                                <a href="#" class="overlay_icon"><i class="fab fa-facebook-f fa-2x"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="#"><h4 class="card-title">Magdalene Nyale</h4></a>
+                            <span class="">Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> <!-- /container -->       
-</section>
+        </section>
+ 

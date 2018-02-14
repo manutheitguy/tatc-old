@@ -47,7 +47,7 @@ section {
     background: url(../../images/bglight.png);
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
     position: fixed;
-    z-index: 2;
+    z-index: 99999999;
     top: 0px;
 }
 

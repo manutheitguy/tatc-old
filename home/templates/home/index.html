@@ -2,32 +2,26 @@
 
 {% load static %}
 
-{% block nav %}
+{% block nav %}{% include 'home/nav/navbar.html' %}{% endblock nav %}
 
-{% include 'home/nav/navbar.html' %}
-  
-{% endblock nav %}
+{% block hero %}{% include 'home/hero.html' %}{% endblock hero %}
 
-{% block hero %}
+{% block services %}{% include 'home/services.html' %}{% endblock services %}
 
-{% include 'home/hero.html' %}
+{% block exports %}{% include 'home/exports.html' %}{% endblock exports %}
 
-{% endblock hero %}
+{% block imports %}{% include 'home/imports.html' %}{% endblock imports %}
 
-{% block services %}
+{% block it-services %}{% include 'home/it-services.html' %}{% endblock it-services %}
 
-{% include 'home/services.html' %}
+{% block team %}{% include 'home/team.html' %}{% endblock team %}
 
-{% endblock services %}
+{% block testimonials %}{% include 'home/testimonials.html' %}{% endblock testimonials %}
 
-{% block contact %}
+{% block blog %}{% include 'home/blog.html' %}{% endblock blog %}
 
-{% include 'home/contact.html' %}
+{% block partners %}{% include 'home/partners.html' %}{% endblock partners %}
 
-{% endblock contact %}
+{% block contact %}{% include 'home/contact.html' %}{% endblock contact %}
 
-{% block footer %}
-
-{% include 'home/footer.html' %}
-
-{% endblock footer%}
+{% block footer %}{% include 'home/footer.html' %}{% endblock footer%}
