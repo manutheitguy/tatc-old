@@ -189,11 +189,6 @@ p:last-child {
     padding-bottom: 2.5rem;
     position: relative;
     overflow: hidden;
-}
-.sections2 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    position: relative;
     overflow: hidden;
 }
 .sections.footer {
@@ -354,60 +349,6 @@ section .subtitle-half h5 {
 }
 
 
-/* 
-######################################################################  
-                        Extra Height CSS 
-######################################################################
-*/
-.margin-top-20 {
-    margin-top: 20px;
-}
-.margin-bottom-20 {
-    margin-bottom: 20px;
-}
-.margin-top-40 {
-    margin-top: 40px;
-}
-.margin-bottom-40 {
-    margin-bottom: 40px;
-}
-.margin-top-60 {
-    margin-top: 60px;
-}
-.margin-80 {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-.margin-bottom-60 {
-    margin-bottom: 60px;
-}
-.margin-top-80 {
-    margin-top: 80px;
-}
-.margin-bottom-80 {
-    margin-bottom: 80px;
-}
-.padding-top-20 {
-    padding-top: 1.33rem;
-}
-.padding-bottom-20 {
-    padding-bottom: 1.33rem;
-}
-.padding-top-40 {
-    padding-top: 2.66rem;
-}
-.padding-bottom-40 {
-    padding-bottom: 2.66rem;
-}
-.padding-top-60 {
-    padding-top: 5rem;
-}
-.padding-bottom-60 {
-    padding-bottom: 5rem;
-}
-.padding-bottom-0 {
-    padding-bottom: 0;
-}
 /* 
 ######################################################################  
                         Padding
