@@ -974,4 +974,6 @@ textarea::-ms-input-placeholder
 
 }
 
-
+.gray-bg {
+    background-image: url(../images/gray-bg.jpg);
+}
